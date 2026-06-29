@@ -1,0 +1,14 @@
+qemu:
+  e2k:
+    if: non-free
+    type: singleFile
+    # sources: https://git.openelbrus.ru/mcst/qemu
+    dir: qemu-e2k
+    check_exe: "{{filename}} --version"
+    filename: qemu-e2k-static-{{name}}
+    url: https://dev.mcst.ru/downloads/{{date}}/qemu-e2k-static
+    after_stage_script:
+      - ln -s {{filename}} {{dir}}/qemu-e2k-static
+    targets:
+      - name: 1.2
+        date: 2026-06-17

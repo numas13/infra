@@ -148,3 +148,7 @@ ln -s "${OPT}"/lcc-1.20.17.e2k-generic.3.14 /opt/mcst/lcc-1.20.17.e2k-generic.3.
 ##################################
 # Rust compilers for E2K
 ce_install compilers/e2k/rust
+
+##################################
+# QEMU for E2K
+ce_install qemu/e2k
