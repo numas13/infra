@@ -140,6 +140,8 @@ compilers:
     targets:
     - '6.3'
   e2k:
+    # Upstream Rust compiler does not support E2K architecture and cannot be
+    # built from source because LLVM source code is not available.
     rust:
       if: non-free
       type: script

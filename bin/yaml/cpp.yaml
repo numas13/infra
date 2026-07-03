@@ -1723,6 +1723,8 @@ compilers:
           vername: v1500
         - name: 15.0.7
           vername: v1507
+    # MCST LCC is a non-free compiler with EDG frontend for E2K and SPARC architectures.
+    # Do not be confused with https://en.wikipedia.org/wiki/LCC_(compiler)
     mcst-lcc:
       if: non-free
       type: tarballs

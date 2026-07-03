@@ -1,4 +1,6 @@
 qemu:
+  # Upsteam QEMU does not support E2K architecture and without compilers makes
+  # no sense. The emulator will be executed in nsjail sandbox anyway.
   e2k:
     if: non-free
     type: singleFile

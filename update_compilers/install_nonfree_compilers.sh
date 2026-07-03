@@ -136,6 +136,9 @@ install_cuda https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_
 
 ##################################
 # MCST LCC compilers for E2K
+#
+# MCST LCC is a non-free compiler with EDG frontend.
+# Do not be confused with https://en.wikipedia.org/wiki/LCC_(compiler)
 ce_install compilers/c++/mcst-lcc/e2k
 
 # Fixed paths in lcc-1.19.11.
@@ -147,8 +150,13 @@ ln -s "${OPT}"/lcc-1.20.17.e2k-generic.3.14 /opt/mcst/lcc-1.20.17.e2k-generic.3.
 
 ##################################
 # Rust compilers for E2K
+#
+# Upstream Rust compiler does not support E2K architecture.
 ce_install compilers/e2k/rust
 
 ##################################
 # QEMU for E2K
+#
+# Upstream QEMU does not support E2K architecture and without compilers makes
+# no sense. The emulator will be executed in nsjail sandbox anyway.
 ce_install qemu/e2k
